@@ -14,7 +14,7 @@ class AddIsReviwedToCartOrders extends Migration
     public function up()
     {
         Schema::table('cart_orders', function (Blueprint $table) {
-            $table->string('is_reviewed');
+            $table->string('is_reviewed')->default(0);
         });
     }
 
