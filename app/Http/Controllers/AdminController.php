@@ -16,7 +16,7 @@ class AdminController extends Controller
     }
 
     public function UserProfile() {
-        $adminData = User::find(10);
+        $adminData = User::find(1);
         
         // compact truyền data qua trang đó
         return view('backend.admin.admin_profile', compact('adminData'));
