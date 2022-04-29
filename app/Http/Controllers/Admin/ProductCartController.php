@@ -25,7 +25,7 @@ class ProductCartController extends Controller
         $price = $productDetails[0]['price'];
         $special_price = $productDetails[0]['special_price'];
 
-        if ($special_price == "na") {
+        if ($special_price == null) {
             $total_price = $price * $quantity;
             $unit_price = $price;
         } else {
