@@ -48,8 +48,9 @@ class ProductListController extends Controller
     public function SimilarProduct(Request $request) {
         $subcategory = $request->subcategory;
         $product_code = $request->product_code;
-        $productlist = ProductList::where(
-            ['subcategory', '=', $subcategory])->orderBy('id', 'desc')->limit(12)->get();
+        $productlist = ProductList::where([
+            ['subcategory', '=', $subcategory],
+            ['product_code', '!=', $product_code]])->orderBy('id', 'desc')->limit(12)->get();
         return $productlist;
     } // end method
 
