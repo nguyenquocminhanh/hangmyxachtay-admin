@@ -49,8 +49,7 @@ class ProductListController extends Controller
         $subcategory = $request->subcategory;
         $product_code = $request->product_code;
         $productlist = ProductList::where(
-            ['subcategory', '=', $subcategory],
-            ['product_code', '!=', $product_code])->orderBy('id', 'desc')->limit(12)->get();
+            ['subcategory', '=', $subcategory])->orderBy('id', 'desc')->limit(12)->get();
         return $productlist;
     } // end method
 
