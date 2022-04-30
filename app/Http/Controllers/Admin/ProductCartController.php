@@ -19,6 +19,7 @@ class ProductCartController extends Controller
         $color = $request->input('color');
         $quantity = $request->input('quantity');
         $product_code = $request->input('product_code');         // IMPORTANT!!! //
+        $product_id = $request->input('product_id'); 
 
         // match product đc add vào với product trong ProductList bằng product_code
         $productDetails = ProductList::where('product_code', $product_code)->get();
@@ -60,6 +61,7 @@ class ProductCartController extends Controller
                 'quantity' => $quantity,
                 'unit_price' => $unit_price,
                 'total_price' => $total_price,
+                'product_id' =>  $product_id
             ]);
         }
 
