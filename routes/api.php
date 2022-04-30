@@ -49,7 +49,7 @@ Route::get('/productlistbysubcategory/{category}/{subcategory}', [ProductListCon
 Route::get('/search/{key}', [ProductListController::class, 'ProductBySearch']);
 
 // Similar Route
-Route::get('/similar/{subcategory}', [ProductListController::class, 'SimilarProduct']);
+Route::get('/similar/{subcategory}/{product_code}', [ProductListController::class, 'SimilarProduct']);
 
 // ProductDetails Route
 Route::get('/productdetails/{id}', [ProductDetailsController::class, 'ProductDetails']);
