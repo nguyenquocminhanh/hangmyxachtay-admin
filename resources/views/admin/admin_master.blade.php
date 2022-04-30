@@ -7,6 +7,24 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--favicon-->
 	<link rel="icon" href="{{ asset('backend/assets/images/favicon-32x32.png') }}" type="image/png" />
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Admin Panel">
+    <meta name="apple-mobile-web-app-title" content="Admin Panel">
+    <meta name="theme-color" content="#002e62">
+    <meta name="msapplication-navbutton-color" content="#002e62">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="description" content="Admin Panel Of hangmyxachtay.org"/>
+
+    <meta property="og:title" content="Hangmyxachtayadmin.org. Admin Panel."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://www.hangmyxachtayadmin.org"/>
+    <meta property="og:image"  href="{{ asset('backend/assets/images/favicon-32x32.png') }}"/>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="%PUBLIC_URL%/57.png" />
+
 	<!--plugins-->
     {{ asset('backend/') }}
 	<link href="{{ asset('backend/assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet"/>
